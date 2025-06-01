@@ -7,8 +7,12 @@ body {
 
 nav {
   background-color: transparent;
-  padding: 10px;
+  padding: 10px 20px; /* Add horizontal padding */
   color: white;
+  max-width: 800px; /* Match container width */
+  margin: 0 auto; /* Center the navbar */
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center the nav items */
 }
 
 nav ul {
@@ -21,7 +25,6 @@ nav ul {
 }
 
 nav li {
-  /* float: left; */
 }
 
 nav li a {
@@ -37,18 +40,137 @@ nav li a:hover {
 }
 
 .container {
-  max-width: 960px; /* Adjust as needed based on the red lines */
+  max-width: 800px; /* Adjusted max-width to make content area more narrow */
   margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add some padding inside the container */
+  padding: 20px; /* Add padding to the container for overall spacing */
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: space-between; /* Distribute space between items */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.content-section {
+  width: 450px; /* Set a fixed width for the content section */
+  /* Removed padding-left and padding-right, now handled by container padding */
 }
 
 .greeting {
   text-align: left; /* Align to the left */
-  margin-top: 50px; /* Adjust as needed for spacing from navbar */
+  margin-top: 50px; /* Keep original margin-top for spacing from navbar */
 }
 
 .greeting h1 {
-  font-size: 2em; /* Smaller letters */
+  font-size: 2.3em; /* Set header size to 2.3em */
   color: white; /* White text color */
   font-weight: normal; /* Soft appearance */
+  font-family: 'Chewy', cursive; /* Apply Chewy font */
+  margin-bottom: 0; /* Remove space below header */
+}
+
+.subtitle {
+  font-size: 1.2em; /* Smaller text */
+  color: white; /* White text color */
+  font-family: 'Arial', 'Helvetica', sans-serif; /* Sleek font */
+  margin-top: 0; /* Remove space between header and first subtitle */
+}
+
+.second-subtitle {
+  margin-top: 15px; /* Bigger space between paragraphs */
+}
+
+.buttons-container {
+  margin-top: 20px; /* Space below the text */
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  align-items: center;
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
+}
+
+.buttons-container button {
+  background-color: transparent; /* Make background transparent */
+  color: white;
+  padding: 0%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Arial', 'Helvetica', sans-serif; /* Sleek font for buttons */
+}
+
+
+.resume-button {
+  font-size: 1em; /* Smaller font size for resume button */
+  border: 1px solid #273d27; /* Light gray border for resume button */
+  font-weight: bold;
+  border-radius: 7px; /* Make the button rounded */
+}
+
+.resume-button:hover {
+  background-color: #273d27;
+}
+
+.icon-button {
+  border: none; /* Ensure no border for icon-only buttons */
+}
+
+.icon-button a {
+  padding: 8px; /* Smaller square padding for icon-only buttons */
+  border: none; /* Ensure no border for icon-only buttons */
+  opacity: 0.75; /* 75% opacity */
+}
+
+.icon-button a:hover {
+  opacity: 1; /* Increase opacity to 1 on hover */
+}
+
+.buttons-container .resume-button svg {
+  margin-left: 15px; /* Space between icon and text */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  color: white;
+  margin-top: 50px; /* Space above the footer */
+  max-width: 800px; /* Match container width */
+  margin: 50px auto 0 auto; /* Center the footer and add top margin */
+}
+
+.footer-text {
+  font-size: 0.9em;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  opacity: 0.5;
+}
+
+.footer-link:hover {
+  opacity: 1;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-container .resume-button {
+  padding: 10px;
+}
+
+.icon-button svg {
+  margin-right: 0; /* No margin for icon-only buttons */
+}
+
+.image-placeholder {
+  width: 200px; /* Smaller width of the blue box */
+  height: 300px; /* Smaller height of the blue box */
+  border: 2px solid blue; /* Blue border for the box */
+  background-color: #334732; /* Placeholder background color */
+  margin-top: 50px; /* Align with the greeting text */
+  margin-left: 20px; /* Adjusted margin to the left to create smaller gap */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
