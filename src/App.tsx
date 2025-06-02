@@ -12,12 +12,15 @@ function App() {
           <div className="greeting">
             <h1>hey, this is Abdelrahman. 👋</h1>
             <p className="subtitle"><MapPin size={20} /> Ontario, Canada</p>
-            <p className="subtitle">19yo software developer and ml engineer.</p>
-            <p className="subtitle second-subtitle">Exploring the tech world since 2010. </p>
+            <p className="subtitle">19yo full-stack developer and ml engineer.</p>
+            <p className="subtitle">Looking to use my skills to make lives easier with technology.</p>
+            <p className="subtitle second-subtitle courier">i like learning new things.</p>
             <div className="buttons-container">
-              <button className="resume-button">
-                Resume <FileUser size={20} />
-              </button>
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+                <button className="resume-button">
+                  Resume <FileUser size={20} />
+                </button>
+              </a>
               <button className="icon-button">
                 <a href="https://www.linkedin.com/in/abdelrahman-wm/" target="_blank">
                   <Linkedin size={20} />
@@ -29,7 +32,7 @@ function App() {
                 </a>
               </button>
               <button className="icon-button">
-                <a href="amoustafa@torontomu.ca" target="_blank">
+                <a href="mailto:amoustafa@torontomu.ca">
                   <Mail size={20} />
                 </a>
               </button>
@@ -37,7 +40,7 @@ function App() {
           </div>
         </div>
         <div className="image-placeholder">
-          {/* Placeholder for image */}
+          <img src="/cover-photo.jpg" alt="Cover Photo" className="cover-photo" />
         </div>
       </div>
       <Footer />

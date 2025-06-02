@@ -140,11 +140,18 @@ nav li a:hover {
 .footer-text {
   font-size: 0.9em;
   font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.stm {
   opacity: 0.5;
 }
 
+.footer-link {
+  opacity: 0.5; /* Set initial opacity to 50% for the link */
+}
+
 .footer-link:hover {
-  opacity: 1;
+  opacity: 1; /* Set opacity to 100% on hover for the link */
 }
 
 .footer-buttons {
@@ -152,7 +159,7 @@ nav li a:hover {
   gap: 10px;
 }
 
-.buttons-container .resume-button {
+.buttons-container a .resume-button {
   padding: 10px;
 }
 
@@ -163,14 +170,27 @@ nav li a:hover {
 .image-placeholder {
   width: 200px; /* Smaller width of the blue box */
   height: 300px; /* Smaller height of the blue box */
-  border: 2px solid blue; /* Blue border for the box */
-  background-color: #334732; /* Placeholder background color */
+  /* Removed border and background-color as it's no longer a placeholder */
   margin-top: 50px; /* Align with the greeting text */
   margin-left: 20px; /* Adjusted margin to the left to create smaller gap */
   flex-shrink: 0; /* Prevent shrinking */
+  overflow: hidden; /* Hide overflow if image is larger than container */
+  border-radius: 10px; /* Optional: add some border-radius to the image container */
+}
+
+.cover-photo {
+  width: 100%; /* Make image fill the container width */
+  height: 100%; /* Make image fill the container height */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  display: block; /* Remove extra space below image */
 }
 
 a {
   color: white;
   text-decoration: none;
+}
+
+.courier {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8em;
 }

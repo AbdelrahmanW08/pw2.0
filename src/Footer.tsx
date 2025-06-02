@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer-text">
-        © {new Date().getFullYear()} <a className='footer-link' href="https://amoustafa.me">amoustafa.me</a>
+        <a className='stm'>© {new Date().getFullYear()}</a> <a className='footer-link' href="https://amoustafa.me">amoustafa.me</a>
       </div>
       <div className="buttons-container">
         <button className="icon-button">
