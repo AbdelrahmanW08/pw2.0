@@ -2,12 +2,16 @@ body {
   background-color: #0a100a;
   margin: 0;
   padding: 0;
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 nav {
   background-color: transparent;
-  padding: 10px 20px; /* Add horizontal padding */
+  padding: 10px 20px; /* Add horizontal padding to match .margin */
   color: white;
   max-width: 800px; /* Match container width */
   margin: 0 auto; /* Center the navbar */
@@ -40,9 +44,9 @@ nav li a:hover {
 }
 
 .container {
-  max-width: 800px; /* Adjusted max-width to make content area more narrow */
-  margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add padding to the container for overall spacing */
+  /* max-width: 800px; Removed, handled by .margin */
+  /* margin: 0 auto; Removed, handled by .margin */
+  padding: 0;
   display: flex; /* Use flexbox for side-by-side layout */
   justify-content: space-between; /* Distribute space between items */
   align-items: flex-start; /* Align items to the top */
@@ -50,7 +54,7 @@ nav li a:hover {
 
 .content-section {
   width: 450px; /* Set a fixed width for the content section */
-  /* Removed padding-left and padding-right, now handled by container padding */
+  /* Removed padding-left and padding-right, now handled by .margin */
 }
 
 .greeting {
@@ -69,7 +73,7 @@ nav li a:hover {
 .subtitle {
   font-size: 1.2em; /* Smaller text */
   color: white; /* White text color */
-  font-family: 'Arial', 'Helvetica', sans-serif; /* Sleek font */
+  font-family: 'Inter', sans-serif; /* Sleek font */
   margin-top: 0; /* Remove space between header and first subtitle */
 }
 
@@ -92,15 +96,23 @@ nav li a:hover {
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-family: 'Arial', 'Helvetica', sans-serif; /* Sleek font for buttons */
+  font-family: 'Inter', sans-serif; /* Sleek font for buttons */
 }
 
 
 .resume-button {
+  background-color: transparent; /* Make background transparent */
+  color: white;
+  padding: 0%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif; /* Sleek font for buttons */
   font-size: 1em; /* Smaller font size for resume button */
   border: 1px solid #273d27; /* Light gray border for resume button */
   font-weight: bold;
   border-radius: 7px; /* Make the button rounded */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
 .resume-button:hover {
@@ -133,13 +145,14 @@ nav li a:hover {
   background-color: transparent;
   color: white;
   margin-top: 50px; /* Space above the footer */
-  max-width: 800px; /* Match container width */
+  /* max-width: 800px; Removed, handled by .margin */
   margin: 50px auto 0 auto; /* Center the footer and add top margin */
+  padding: 20px 20px; /* Add horizontal padding to match .margin */
 }
 
 .footer-text {
   font-size: 0.9em;
-  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .stm {
@@ -159,7 +172,7 @@ nav li a:hover {
   gap: 10px;
 }
 
-.buttons-container a .resume-button {
+.buttons-container .resume-button {
   padding: 10px;
 }
 
@@ -193,4 +206,323 @@ a {
 .courier {
   font-family: 'Courier New', monospace;
   font-size: 0.8em;
+}
+
+.tablist-container {
+  /* max-width: 800px; Removed, handled by .margin */
+  margin: 50px 0 0 0; /* Remove horizontal margin, handled by .margin */
+  padding: 4px 4px; /* Remove horizontal padding, handled by .margin */
+  background-color: #2d472d; /* Dark background for the tablist container */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  justify-content: center; /* Center the tablist */
+  align-items: center;
+  height: 28px; /* Shorter height */
+}
+
+.tab-button.active {
+  background-color: #0a100a;
+  color: white;
+  border-radius: 5px;
+}
+
+.tab-content-container {
+  /* max-width: 800px; Removed, handled by .margin */
+  margin: 20px 0 0 0; /* Remove horizontal margin, handled by .margin */
+  border: 1px solid #223622;
+  border-radius: 10px;
+  color: white;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.tablist {
+  display: flex;
+  gap: 0; /* Remove space between buttons */
+  width: 100%; /* Make tablist take full width of container */
+}
+
+.projects-header {
+  max-width: 800px; /* Match container width */
+  margin: 50px auto 0 auto; /* Center and add top margin */
+}
+
+.projects-header h1 {
+  font-size: 1.8em; /* Smaller than main greeting header */
+  color: white;
+  font-weight: normal;
+  font-family: 'Chewy', cursive;
+  margin-bottom: 0;
+}
+
+.tab-button {
+  background-color: transparent;
+  color: lightgray;
+  font-weight: bold;
+  border: none; /* Remove border */
+  padding: 5px 15px; /* Smaller padding */
+  flex: 1; /* Make buttons take up half the width */
+  border-radius: 5px; /* Remove border-radius */
+  cursor: pointer;
+  font-size: 0.875em; /* Smaller font size */
+  font-family: 'Inter', sans-serif; /* Sleek font */
+  transition: background-color 0.1s ease; /* Smooth transition for hover */
+}
+
+.margin {
+  max-width: 800px; /* Set max-width for the main content area */
+  margin: 0 auto; /* Center the main content area */
+  padding: 0 20px; /* Add horizontal padding to the main content area */
+}
+
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Two columns, responsive */
+  gap: 20px; /* Space between cards */
+  margin-top: 20px; /* Space below the projects header */
+}
+
+.project-card {
+  background-color: transparent; /* Darker background for the card */
+  border-radius: 10px;
+  border: 1px solid #223622;
+  overflow: hidden;
+  margin-bottom: 0; /* Remove margin-bottom as gap handles spacing */
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.project-image-container {
+  padding: 20px 20px 0 20px; /* 20px padding from container, 0 at bottom */
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  display: block;
+  border-radius: 8px; /* Rounded borders for the image */
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 0.9em;
+  color: #b0b0b0; /* Lighter gray for description */
+  margin-bottom: 15px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background-color: #2d472d; /* Dark green background for tags */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.project-link-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #273d27; /* Light gray border */
+  padding: 8px 15px;
+  border-radius: 7px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link-button:hover {
+  background-color: #273d27;
+}
+
+.back-to-top {
+  background-color: transparent;
+  border: none;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 0.9em;
+  color: #b0b0b0; /* Lighter gray for description */
+  margin-bottom: 15px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  background-color: #2d472d; /* Dark green background for tags */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.project-link-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #273d27; /* Light gray border */
+  padding: 8px 15px;
+  border-radius: 7px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link-button:hover {
+  background-color: #273d27;
+}
+
+.back-to-top {
+  background-color: transparent;
+  border: none;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+.back-to-top {
+  background-color: transparent;
+  border: none;
+  color: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.tech-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Space between tech stack items */
+  margin-top: 20px;
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.tech-stack-item {
+  background-color: transparent; /* Darker background for the item */
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+}
+
+.tech-stack-item i {
+  font-size: 1.5em; /* Adjust icon size */
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.timeline {
+  margin-left: 2.5rem;
+  border-left: 1px solid #223622;
+}
+
+.timeline-entry {
+  position: relative;
+  margin-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.timeline-image {
+  position: absolute;
+  top: 2.5rem;
+  left: -4rem;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #223622;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit:contain;
+  background-color: white;
+}
+
+.timeline-info {
+  margin: 0px;
+  font-size: 0.9em;
+  color: #b0b0b0;
+}
+
+.timeline-title {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.timeline-list {
+  margin: 0px;
+  margin-left: 1.2rem;
+  font-size: 0.9em;
+  padding: 0px;
+}
+
+.timeline-list-item {
+  margin-top: 0.25rem;
+  opacity: 85%;
 }
