@@ -44,7 +44,7 @@ function App() {
             </div>
           </div>
           <div className="image-placeholder">
-            <img src="/cover-photo.jpg" alt="Cover Photo" className="cover-photo" />
+            <img src="./cover-photo.jpg" alt="Cover Photo" className="cover-photo" />
           </div>
         </div>
         <div className="tablist-container">
@@ -128,7 +128,7 @@ function App() {
 
         <div className="project-cards-grid">
           <ProjectCard
-            imageSrc="/netflix-clone.jpg"
+            imageSrc="./netflix-clone.jpg"
             title="Netflix Clone"
             description="A clone of the Netflix website for full-stack development practice."
             technologies={["JavaScript", "MongoDB", "Express", "React", "Node.js", "TailwindCSS"]}
@@ -137,7 +137,7 @@ function App() {
           />
 
           <ProjectCard
-            imageSrc="/termhint.jpeg"
+            imageSrc="./termhint.jpeg"
             title="termhint"
             description="Full-stack AI-powered synonym recommender for newcomers."
             technologies={["HTML", "CSS", "Python", "TensorFlow"]}
@@ -146,7 +146,7 @@ function App() {
           />
 
           <ProjectCard
-            imageSrc="/tensorflow.jpg"
+            imageSrc="./tensorflow.jpg"
             title="TensorFlow Models"
             description="Models I have built throughout my learning journey. Include image classification and NLP."
             technologies={["Python", "TensorFlow", "Pandas", "scikit-learn"]}
