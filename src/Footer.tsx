@@ -19,7 +19,7 @@ function Footer() {
           </a>
         </button>
         <button className="icon-button">
-          <a href="amoustafa@torontomu.ca" target="_blank">
+          <a href="mailto:amoustafa@torontomu.ca" target="_blank">
             <Mail size={20} />
           </a>
         </button>
