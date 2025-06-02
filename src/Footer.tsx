@@ -1,4 +1,3 @@
-import React from 'react';
 import { Linkedin, Github, Mail, CornerRightUp } from 'lucide-react';
 
 function Footer() {
