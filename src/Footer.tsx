@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className="footer-container">
       <div className="footer-text">
-        <a className='stm'>© {new Date().getFullYear()}</a> <a className='footer-link' href="https://amoustafa.me">amoustafa.me</a> <a className='stm'>|</a><button className='back-to-top' onClick={scrollToTop}>back to top <CornerRightUp size={15 }/> </button>
+        <a className='stm'>© {new Date().getFullYear()}</a> <a className='footer-link' href="https://abdelrahmanw08.github.io/pw/">abdelrahmanw08.github.io/pw</a> <a className='stm'>|</a><button className='back-to-top' onClick={scrollToTop}>back to top <CornerRightUp size={15 }/> </button>
       </div>
       <div className="buttons-container no-margin">
         <button className="icon-button">
