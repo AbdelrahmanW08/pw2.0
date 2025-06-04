@@ -216,6 +216,10 @@ function App() {
             <i className="devicon-postgresql-plain monotone"></i>
             <span>PostgreSQL</span>
           </div>
+          <div className="tech-stack-item">
+            <i className="devicon-tensorflow-original monotone"></i>
+            <span>TensorFlow</span>
+          </div>
         </div>
         
         <Footer />
