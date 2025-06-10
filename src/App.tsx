@@ -127,13 +127,14 @@ function App() {
         </div>
 
         <div className="project-cards-grid">
+
           <ProjectCard
-            imageSrc="./netflix-clone.jpg"
-            title="Netflix Clone"
-            description="A clone of the Netflix website for full-stack development practice."
-            technologies={["JavaScript", "MongoDB", "Express", "React", "Node.js", "TailwindCSS"]}
+            imageSrc="./chatty.jpg"
+            title="Chatty"
+            description="MERN stack chat app with real-time messaging, image sharing, and profile customization."
+            technologies={["JavaScript", "MongoDB", "Express", "React", "Node.js", "Socket.io"]}
             // websiteLink="https://google.com"
-            sourceLink="https://github.com/AbdelrahmanW08/netflix-clone"
+            sourceLink="https://github.com/AbdelrahmanW08/chatty"
           />
 
           <ProjectCard
@@ -152,6 +153,15 @@ function App() {
             technologies={["Python", "TensorFlow", "Pandas", "scikit-learn"]}
             // websiteLink="https://google.com"
             sourceLink="https://github.com/AbdelrahmanW08/termhint"
+          />
+
+          <ProjectCard
+            imageSrc="./netflix-clone.jpg"
+            title="Netflix Clone"
+            description="A clone of the Netflix website for full-stack development practice."
+            technologies={["JavaScript", "MongoDB", "Express", "React", "Node.js", "TailwindCSS"]}
+            // websiteLink="https://google.com"
+            sourceLink="https://github.com/AbdelrahmanW08/netflix-clone"
           />
         </div>
 
